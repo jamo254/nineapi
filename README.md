@@ -23,6 +23,14 @@ nineapi is a FastAPI-based API framework designed for rapid API development. It 
    ```bash
    git clone https://github.com/jamo254/nineapi.git
    cd nineapi
+   
+2. Create a virtual environment (optional but recommended):
+   ```python
+    python -m venv venv
+    source venv/bin/activate  # On Windows, use "venv\Scripts\activate"
+
+   ```
+   
 
 ## Usage
 -- Run
