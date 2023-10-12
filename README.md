@@ -27,3 +27,12 @@ nineapi is a FastAPI-based API framework designed for rapid API development. It 
 ## Usage
 -- Run
 - ❯ uvicorn nineApi.app.main:app --reload  
+
+Authors
+
+Jamoni Tech
+
+Acknowledgments
+
+FastAPI: The high-performance Python web framework used in this project.
+Uvicorn: ASGI server that runs your FastAPI app.
