@@ -1,11 +1,22 @@
+# main.py
 from fastapi import FastAPI
-from nineApi.app.routers import user
+from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
+from starlette.requests import Request
 
 app = FastAPI()
 
-app.include_router(user.router)
+# Mount the "static" directory located within the "nineApi/app" directory
+app.mount("/static", StaticFiles(directory="nineApi/app/static"), name="static")
 
-# Settting up server
-if __name__ == "__main__":
-    import  uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+# Initialize Jinja2 templates
+templates = Jinja2Templates(directory="nineApi/app/templates")
+
+@app.get("/")
+async def read_root(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
+
+
+@app.get("/user")
+def user(request: Request):
+    return  templates.TemplateResponse("home.html", {"request": request})
