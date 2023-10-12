@@ -34,5 +34,5 @@ Jamoni Tech
 
 Acknowledgments
 
-FastAPI: The high-performance Python web framework used in this project.
-Uvicorn: ASGI server that runs your FastAPI app.
+- FastAPI: The high-performance Python web framework used in this project.
+- Uvicorn: ASGI server that runs your FastAPI app.
